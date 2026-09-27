@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Personal</title>
+     <meta name="autor" content="Nadia Gpe Rodriguez Torres">
+    <meta name="keywords" content="Curriculum, CV, datos, portafolio personal">
+    <link rel="stylesheet" href="./estilos/estilo.css">
+    <script src="https://kit.fontawesome.com/25edb2d433.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logo">Nadia<span>Rodríguez</span></div>
+        <audio id="musica-fondo" loop>
+        <source src="./audio/mii-maker-wii-u.mp3" type="audio/mpeg">
+</audio>
+
+<button id="btn-musica" class="btn-musica" title="Música de fondo">
+    <i id="icono-musica" class="fas fa-music"></i>
+</button>
+
+<script>
+    const audio = document.getElementById('musica-fondo');
+    const btnMusica = document.getElementById('btn-musica');
+    const icono = document.getElementById('icono-musica');
+
+    btnMusica.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            btnMusica.classList.add('reproduciendo');
+            icono.className = 'fas fa-pause';
+        } else {
+            audio.pause();
+            btnMusica.classList.remove('reproduciendo');
+            icono.className = 'fas fa-music';
+        }
+    });
+</script>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#educacion">Educación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Nadia <span>Rodríguez</span></h1>
+                    <h2>Estudiante de Desarrollo de Software</h2>
+                    <p>Desarrolladora en formación orientada al frontend y backend.
+                        Disfruto transformar ideas en proyectos web interactivos 
+                        mediante código limpio, diseño responsive y constantes ganas
+                         de aprender nuevas tecnologías.
+                    </p>
+            <div class="social-links">
+            <a href="https://github.com/NadsRt62" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:nadilup0602@email.com" title="Enviar Correo"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/+524772607192" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+                   
+            <a href="./documentos/CV_Nadia_Rodriguez.pdf" target="_blank" class="btn"> Descargar CV</a>
+                </div>
+                <div class="hero-image">
+                    <img src="./imagenes/WhatsApp Image 2026-09-25 at 7.26.52 PM.jpeg" alt="foto de perfil">
+                </div>
+            </div>
+
+            
+        </section>
+
+       <section id="proyectos" class="projects">
+    <h2 class="section-title">Proyectos Personales</h2>
+
+    <div class="projects-container">
+        
+        <article class="project-card">
+            <div class="project-img">
+                <img src="./imagenes/cartaSanValentin.png" alt="Carta responsiva San Valentin">
+            </div>
+            <div class="project-info">
+                <h3>Carta responsiva de San Valentín</h3>
+                <p>Página web interactiva con estética pastel 
+                    y diseño responsivo. Cuenta con ani
+                    maciones fluidas para abrir, leer y
+                     guardar una carta virtual personalizada 
+                     mediante transiciones en CSS y JavaScript.</p>
+                
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://loveletterresponsiva.netlify.app//" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-external-link-alt"></i> Demo</a>
+                    <a href="https://github.com/NadsRt62/carta-san-valentin---love-letter.git" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> Código
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-img">
+                <img src="./imagenes/ecosmart2.png" alt="EcoSmart">
+            </div>
+            <div class="project-info">
+                <h3>EcoSmart</h3>
+                <p>Plataforma web para la gestión ambiental en León 
+                    que promueve la separación de residuos, la generación 
+                    de reportes ciudadanos de basura y la consulta de rutas 
+                    de recolección en tiempo real.</p>
+
+                <div class="project-tech">
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="#" onclick="return false;" title="Demo no disponible">
+                    <i class="fas fa-external-link-alt"></i> Demo</a>
+                    <a href="#" onclick="return false;" title="Demo no disponible">
+                        <i class="fab fa-github"></i> Código
+                    </a>
+                </div>
+            </div>
+        </article>
+
+     
+
+    </div>
+</section>
+
+        <section id="skills" class="skills">
+    <h2 class="section-title">Habilidades Técnicas</h2>
+    <div class="skills-container">
+        
+        <div class="skill-category">
+            <h3><i class="fas fa-code"></i> Frontend</h3>
+            <ul class="skills-list">
+                <li><i class="fab fa-html5"></i> HTML5</li>
+                <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                <li><i class="fab fa-js"></i> JavaScript</li>
+            </ul>
+        </div>
+
+        <div class="skill-category">
+            <h3><i class="fas fa-server"></i> Backend & Lenguajes</h3>
+            <ul class="skills-list">
+                <li><i class="fab fa-java"></i> Java</li>
+                <li><i class="fab fa-php"></i> PHP</li>
+                <li><i class="fab fa-python"></i> Python</li>
+                <li><i class="fas fa-terminal"></i> C</li>
+            </ul>
+        </div>
+
+        <div class="skill-category">
+            <h3><i class="fas fa-database"></i> Bases de Datos & Herramientas</h3>
+            <ul class="skills-list">
+                <li><i class="fas fa-database"></i> MySQL</li>
+                <li><i class="fab fa-git-alt"></i> Git & GitHub</li>
+                <li><i class="fas fa-laptop-code"></i> VS Code / NetBeans</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+   <section id="educacion" class="educacion">
+            <div class="timeline-content">
+    <span class="date">2025 - Presente</span>
+    <h3>Estudiante de Desarrollo de Software Multiplataforma</h3>
+    <h4>Universidad Tecnológica de León</h4>
+    
+    <p class="timeline-description">
+        Actualmente cursando el 4° cuatrimestre de la carrera, enfocada en el desarrollo web, bases de datos y aplicaciones móviles.
+    </p>
+
+    <div class="skills-detail">
+        <span class="detail-title">Idiomas:</span>
+        <div class="language-tags">
+            <span class="lang-tag">Español <small>(Nativo)</small></span>
+            <span class="lang-tag">Inglés <small>(B2 - Independiente)</small></span>
+            <span class="lang-tag">Chino Mandarín <small>(Básico)</small></span>
+        </div>
+    </div>
+</div>
+        </section>
+
+    </main>
+
+  <section id="contacto" class="contacto">
+    <div class="contacto-container">
+        <div class="contacto-info">
+            <h2>Contáctame</h2>
+            <p class="info-texto">
+                Mi correo electrónico es:<br>
+                <strong>nadilup0602@gmail.com</strong>
+            </p>
+            <p class="info-texto">
+                Teléfono / WhatsApp:<br>
+                <strong>+52 477 260 7192</strong>
+            </p>
+            <div class="social-links-contacto">
+                <a href="https://github.com/NadsRt62" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:nadilup0602@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/+524772607192" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <form action="https://formspree.io/f/tu-form-id" method="POST" class="contacto-form">
+            <p class="form-titulo">Formulario de contacto</p>
+            
+            <div class="form-group">
+                <input type="text" name="nombre" placeholder="Ingresa tu nombre" required>
+            </div>
+
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+            </div>
+
+            <div class="form-group">
+                <textarea name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+    </div>
+</section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Nadia Rodríguez - todos los derechos reservados</p>
+        </div>
+    </footer>
+    <script>
+        window.addEventListener('click', () => {
+            const audio = document.getElementById('musica-fondo');
+            if (audio.paused) {
+                audio.play().catch(error => {
+                    console.log("El navegador bloqueó el autoplay hasta la interacción:", error);
+                });
+            }
+        }, { once: true });
+    </script>
+    
+</body>
+</html>
+</body>
+</html>
